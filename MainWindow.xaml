@@ -1,0 +1,35 @@
+﻿<Window x:Class="kalkulatottakiprosty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kalkulatottakiprosty"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Text="X:" FontSize="30"/>
+            <TextBlock Text="Y:" FontSize="30"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox FontSize="30" x:Name="XTextBox"/>
+            <TextBox FontSize="30" x:Name="YTextBox"/>
+        </StackPanel>
+        <TextBlock Text="wynik" FontSize="30" Grid.Row="1"/>
+        <TextBlock Text="0" FontSize="30" Grid.Row="1" Grid.Column="1" x:Name="TextBlock"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <Button  Width="50" Height="50" Content="+" Click="Button_Click"/>
+            <Button Width="50" Height="50" Content="-" Click="Button_Click_1"/>
+        </StackPanel>
+    </Grid>
+</Window>
